@@ -29,20 +29,20 @@ int GetFactorial(int num)
     return factorial;
 }
 
-void FillIntArray(int[] array, int minValue = 0, int maxValue = 100)
+void FillIntArray(int[] arr, int minVal = -99, int maxVal = 100)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[i] = new Random().Next(minValue, maxValue);
+        arr[i] = new Random().Next(minVal, maxVal);
     }
 }
 
-void PrintIntArray(int[] array)
+void PrintIntArray(int[] arr)
 {
     Console.Write($"Вывод массива: [");
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{array[i]}, ");
+        Console.Write($"{arr[i]}, ");
     }
     Console.Write("\b\b]");
 }
@@ -71,17 +71,17 @@ void Task03()
     Console.WriteLine($"Факториал числа {number} -> {factorial}");
 }
 
-Task04();
+// Task04();
 // 4)Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
 void Task04()
 {
     int size = ReadIntFromConsole("Введите размер массива: ");
-    int[] massiv = new int[size];
+    int[] array = new int[size];
 
-    FillIntArray(massiv, 0, 2);
-    PrintIntArray(massiv);
+    FillIntArray(array, 0, 2);
+    PrintIntArray(array);
 }
 
 
